@@ -123,11 +123,11 @@ function draw() {
   //Retângulos para evitar o mouse deixando rastro no menu + Título
   fill("#2c2c2c");
   noStroke();
-  rect(0, 0, 414, 187);
-  rect(0, 0, 17, 896);
-  rect(0, 397, 17, 896);
-  rect(17, 472, 380, 424);
-  image(titulo, 27, 38);
+  rect(0, 0, displayWidth, (10*displayHeight)/48);
+  rect(0, 0, (2*displayWidht)/24, displayHeight);
+  rect((22*displayWidth)/24, 0, (2*displayWidth)/24, displayHeight);
+  rect((2*displayWidht)/24, (24*displayHeight)/48, (20*displayWidth)/24, (24*displayHeight)/48);
+  image(titulo, (2*displayWidht)/24, (2*displayHeight)/48);
 
   if (fotosTiradas == 0) {
     image(cam, 30, 210, 640, 480);
