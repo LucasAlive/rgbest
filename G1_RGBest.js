@@ -49,11 +49,11 @@ let menorDiferencaBlue = 255;
 var pontos = 0;
 
 function setup() {
-  createCanvas(700, 900);
+  createCanvas(displayWidth, displayHeight);
   background("#2C2C2C");
   cam = createCapture(VIDEO);
-  cam.size(640, 480);
-  cam.position(30, 210);
+  cam.size(0,916*displayWidth, 0,292*displayHeight);
+  cam.position(0,042*displayWidth, 0,208*displayHeight);
   cam.hide();
   titulo = loadImage("RGBest.png");
 
@@ -62,58 +62,58 @@ function setup() {
   botaoPalpiteRed.style("font-weight", "bold");
   botaoPalpiteRed.style("color", "white");
   botaoPalpiteRed.style("font-weight", "500");
-  botaoPalpiteRed.style("border-radius", "8px");
+  botaoPalpiteRed.style("border-radius", "6px");
   botaoPalpiteRed.style("background-color", "indianred");
   botaoPalpiteRed.style("border", "0px");
   botaoPalpiteRed.mouseClicked(Avermelhar);
-  botaoPalpiteRed.size(200, 50);
-  botaoPalpiteRed.position(30, 705);
+  botaoPalpiteRed.size(106, 106);
+  botaoPalpiteRed.position(544, 28);
 
   //Botão de dar Palpite para o pixel Green 🟢
   botaoPalpiteGreen = createButton("DAR SEU PALPITE DO PIXEL MAIS VERDE!");
   botaoPalpiteGreen.style("font-weight", "bold");
   botaoPalpiteGreen.style("color", "white");
   botaoPalpiteGreen.style("font-weight", "500");
-  botaoPalpiteGreen.style("border-radius", "8px");
+  botaoPalpiteGreen.style("border-radius", "6px");
   botaoPalpiteGreen.style("background-color", "seagreen");
   botaoPalpiteGreen.style("border", "0px");
   botaoPalpiteGreen.mouseClicked(Esverdear);
-  botaoPalpiteGreen.size(200, 50);
-  botaoPalpiteGreen.position(30, 765);
+  botaoPalpiteGreen.size(106, 106);
+  botaoPalpiteGreen.position(544, 154);
 
   //Botão de dar Palpite para o pixel Blue 🔵
   botaoPalpiteBlue = createButton("DAR SEU PALPITE DO PIXEL MAIS AZUL!");
   botaoPalpiteBlue.style("font-weight", "bold");
   botaoPalpiteBlue.style("color", "white");
   botaoPalpiteBlue.style("font-weight", "500");
-  botaoPalpiteBlue.style("border-radius", "8px");
+  botaoPalpiteBlue.style("border-radius", "6px");
   botaoPalpiteBlue.style("background-color", "dodgerblue");
   botaoPalpiteBlue.style("border", "3px solid #1E90FF");
   botaoPalpiteBlue.mouseClicked(Azular);
-  botaoPalpiteBlue.size(200, 50);
-  botaoPalpiteBlue.position(30, 825);
+  botaoPalpiteBlue.size(106, 106);
+  botaoPalpiteBlue.position(544, 280);
 
   //Botão de descobrir os Pixels mais RGB 🔴🟢🔵
   botaoMelhorRed = createButton("DESCOBRIR OS PIXELS MAIS RGB!");
   botaoMelhorRed.style("color", "black");
   botaoMelhorRed.style("font-weight", "700");
-  botaoMelhorRed.style("border-radius", "8px");
-  botaoMelhorRed.style("background-color", "#f2f2f2");
-  botaoMelhorRed.style("border", "3px solid #f2f2f2");
+  botaoMelhorRed.style("border-radius", "6px");
+  botaoMelhorRed.style("background-color", "#C9C9C9");
+  botaoMelhorRed.style("border", "3px solid #C9C9C9");
   botaoMelhorRed.mouseClicked(Calcular);
-  botaoMelhorRed.size(200, 50);
-  botaoMelhorRed.position(250, 705);
+  botaoMelhorRed.size(211, 33);
+  botaoMelhorRed.position(759, 177);
 
   //Botão de Resetar e Limpar palpites
   botaoReset = createButton("RESETAR PALPITES");
   botaoReset.style("color", "black");
   botaoReset.style("font-weight", "700");
-  botaoReset.style("border-radius", "8px");
+  botaoReset.style("border-radius", "6px");
   botaoReset.style("background-color", "#868686");
   botaoReset.style("border", "3px solid #868686");
   botaoReset.mouseClicked(Resetar);
-  botaoReset.size(200, 50);
-  botaoReset.position(250, 765);
+  botaoReset.size(211, 33);
+  botaoReset.position(803, 177);
 }
 
 function draw() {
@@ -123,11 +123,11 @@ function draw() {
   //Retângulos para evitar o mouse deixando rastro no menu + Título
   fill("#2c2c2c");
   noStroke();
-  rect(0, 0, 700, 210);
-  rect(0, 690, 700, 210);
-  rect(0, 0, 30, 900);
-  rect(670, 0, 30, 900);
-  image(titulo, 103, 26);
+  rect(0, 0, 414, 187);
+  rect(0, 0, 17, 896);
+  rect(0, 397, 17, 896);
+  rect(17, 472, 380, 424);
+  image(titulo, 27, 38);
 
   if (fotosTiradas == 0) {
     image(cam, 30, 210, 640, 480);
@@ -135,7 +135,7 @@ function draw() {
     //Pontuação do jogador
     fill(0);
     noStroke();
-    rect(470, 705, 160, 170, 10, 10, 10, 10);
+    rect(28, 737, 130, 121, 6, 6, 6, 6);
   
     fill("#868686");
     textSize(16);
