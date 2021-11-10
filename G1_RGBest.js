@@ -154,22 +154,17 @@ function draw() {
     //Pontuação do jogador
     fill(0);
     noStroke();
-    rect(470, 705, 160, 170, 10, 10, 10, 10);
-  
-    fill("#868686");
-    textSize(16);
-    textStyle(BOLD);
-    text("PONTUAÇÃO", 490, 735);
+    rect((2/24)*displayWidth, (40/48)*displayHeight, (8/24)*displayWidht, (7/48)*displayHeight, 6, 6, 6, 6);
   
     fill(255);
     textSize(46);
     textStyle(BOLD);
-    text(pontos, 490, 780);
+    text(pontos, (3/48)*displayWidth, (41/48)*displayHeight);
   
     fill(255, 255, 255, 128);
     textSize(24);
     textStyle(NORMAL);
-    text("/100", 550, 780);
+    text("/100", (5/48)*displayWidth, (41/48)*displayHeight));
     
     
     for (var x = 0; x <= fotografia.width; x += 5) {
