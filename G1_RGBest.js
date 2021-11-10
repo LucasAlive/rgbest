@@ -52,8 +52,8 @@ function setup() {
   createCanvas(displayWidth, displayHeight);
   background("#2C2C2C");
   cam = createCapture(VIDEO);
-  cam.size(0,916*displayWidth, 0,292*displayHeight);
-  cam.position(0,042*displayWidth, 0,208*displayHeight);
+  cam.size((20/24)*displayWidth, (14/48)*displayHeight);
+  cam.position((20/24)*displayWidth, (10/48)*displayHeight);
   cam.hide();
   titulo = loadImage("RGBest.png");
 
@@ -66,8 +66,8 @@ function setup() {
   botaoPalpiteRed.style("background-color", "indianred");
   botaoPalpiteRed.style("border", "0px");
   botaoPalpiteRed.mouseClicked(Avermelhar);
-  botaoPalpiteRed.size(106, 106);
-  botaoPalpiteRed.position(544, 28);
+  botaoPalpiteRed.size((6/24)*displayWidth, (6/48)*displayHeight);
+  botaoPalpiteRed.position((2/24)*displayWidth, (29/48)*displayHeight);
 
   //Botão de dar Palpite para o pixel Green 🟢
   botaoPalpiteGreen = createButton("DAR SEU PALPITE DO PIXEL MAIS VERDE!");
@@ -78,8 +78,8 @@ function setup() {
   botaoPalpiteGreen.style("background-color", "seagreen");
   botaoPalpiteGreen.style("border", "0px");
   botaoPalpiteGreen.mouseClicked(Esverdear);
-  botaoPalpiteGreen.size(106, 106);
-  botaoPalpiteGreen.position(544, 154);
+  botaoPalpiteGreen.size((6/24)*displayWidth, (6/48)*displayHeight);
+  botaoPalpiteGreen.position((9/24)*displayWidth, (29/48)*displayHeight);
 
   //Botão de dar Palpite para o pixel Blue 🔵
   botaoPalpiteBlue = createButton("DAR SEU PALPITE DO PIXEL MAIS AZUL!");
@@ -90,8 +90,8 @@ function setup() {
   botaoPalpiteBlue.style("background-color", "dodgerblue");
   botaoPalpiteBlue.style("border", "3px solid #1E90FF");
   botaoPalpiteBlue.mouseClicked(Azular);
-  botaoPalpiteBlue.size(106, 106);
-  botaoPalpiteBlue.position(544, 280);
+  botaoPalpiteBlue.size((6/24)*displayWidth, (6/48)*displayHeight);
+  botaoPalpiteBlue.position((16/24)*displayWidth, (29/48)*displayHeight);
 
   //Botão de descobrir os Pixels mais RGB 🔴🟢🔵
   botaoMelhorRed = createButton("DESCOBRIR OS PIXELS MAIS RGB!");
@@ -101,8 +101,8 @@ function setup() {
   botaoMelhorRed.style("background-color", "#C9C9C9");
   botaoMelhorRed.style("border", "3px solid #C9C9C9");
   botaoMelhorRed.mouseClicked(Calcular);
-  botaoMelhorRed.size(211, 33);
-  botaoMelhorRed.position(759, 177);
+  botaoMelhorRed.size((10/24)*displayWidth, (2/48)*displayHeight);
+  botaoMelhorRed.position((12/24)*displayWidth, (41/48)*displayHeight);
 
   //Botão de Resetar e Limpar palpites
   botaoReset = createButton("RESETAR PALPITES");
@@ -112,8 +112,8 @@ function setup() {
   botaoReset.style("background-color", "#868686");
   botaoReset.style("border", "3px solid #868686");
   botaoReset.mouseClicked(Resetar);
-  botaoReset.size(211, 33);
-  botaoReset.position(803, 177);
+  botaoReset.size((10/24)*displayWidth, (2/48)*displayHeight);
+  botaoReset.position((12/24)*displayWidth, (44/48)*displayHeight);
 }
 
 function draw() {
@@ -130,27 +130,22 @@ function draw() {
   image(titulo, (2*displayWidht)/24, (2*displayHeight)/48);
 
   if (fotosTiradas == 0) {
-    image(cam, 30, 210, 640, 480);
+    image(cam, (20/24)*displayWidth, (10/48)*displayHeight), (20/24)*displayWidth, (14/48)*displayHeight);
     
     //Pontuação do jogador
     fill(0);
     noStroke();
-    rect(28, 737, 130, 121, 6, 6, 6, 6);
-  
-    fill("#868686");
-    textSize(16);
-    textStyle(BOLD);
-    text("PONTUAÇÃO", 490, 735);
+    rect((2/24)*displayWidth, (40/48)*displayHeight, (8/24)*displaWidth, (7/48)*displayHeight, 6, 6, 6, 6);
   
     fill(255);
     textSize(46);
     textStyle(BOLD);
-    text(pontos, 490, 780);
+    text(pontos, (3/48)*displayWidth, (41/48)*displayHeight);
   
     fill(255, 255, 255, 128);
     textSize(24);
     textStyle(NORMAL);
-    text("/100", 550, 780);
+    text("/100", (5/48)*displayWidth, (41/48)*displayHeight));
   }
   
   else if (fotosTiradas == 1) {
