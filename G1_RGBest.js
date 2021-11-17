@@ -49,11 +49,12 @@ let menorDiferencaBlue = 255;
 var pontos = 0;
 
 function setup() {
-  createCanvas(700, 900);
+  createCanvas(displayWidth, displayHeight);
   background("#2C2C2C");
   cam = createCapture(VIDEO);
-  cam.size(640, 480);
-  cam.position(30, 210);
+  cam.size((20/24)*displayWidth, (14/48)*displayHeight);
+  cam.position((20/24)*displayWidth, (10/48)*displayHeight);
+
   cam.hide();
   titulo = loadImage("RGBest.png");
 
